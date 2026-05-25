@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Llave Digital 3.0 | Tu Celular en una Máquina de Ingresos con IA",
+  title: "Descubre si es para Ti, haciendo el quiz rápido",
   description:
-    "Aprende a generar ingresos desde casa usando inteligencia artificial. Sin experiencia técnica. Sin pedir permiso. El sistema de Daniela Silva para mujeres latinas que quieren más.",
+    "Cansada de decirle a tu hijo "esta vez no, no me alcanza", y quedarte con esa sensación de impotencia?.",
   keywords: [
     "ingresos desde casa",
     "inteligencia artificial",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     icon: "/logo.svg",
   },
   openGraph: {
-    title: "Llave Digital 3.0 | Tu Celular en una Máquina de Ingresos con IA",
+    title: "Solo cupo para 5 mujeres que quieran realmente invertir en sus habilidades",
     description:
-      "La inteligencia artificial es tu aliada más poderosa. Convierte tu celular en una máquina de ingresos desde casa.",
+      "Sácale el mayor provecho a la IA y conviertela en tu vendedora 24/7",
     type: "website",
   },
 };
