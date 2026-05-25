@@ -99,13 +99,13 @@ export function HeroSection() {
           transition={{ duration: 0.9, delay: 0.4, type: "spring" }}
         >
           <p className="text-base md:text-lg lg:text-xl text-foreground/90 max-w-3xl mx-auto mb-4 leading-relaxed">
-            Tú que nunca te diste el lujo de rendirte. Tú que inventas, resuelves, aguantas.{" "}
+            Para TI que siempre te reinventas, resuelves, aguantas.{" "}
             <span className="text-gold font-semibold">
-              La inteligencia artificial no es tu competencia, es tu aliada más poderosa.
+              Ahora tienes una Llave poderosa que te abrirá las puertas a la prosperidad: La Inteligencia Artificial!
             </span>{" "}
-            Y con el sistema correcto, puedes convertir tu celular en una máquina de ingresos desde casa.{" "}
-            <span className="text-gold font-semibold">Sin experiencia técnica. Sin pedir permiso.</span>{" "}
-            Tu turno es ahora.
+            Y con este sistema listo para aplicar, donde no tienes que crear nada desde cero, ni probar.{" "}
+            <span className="text-gold font-semibold">+Mi acompañamiento y asesoria personalizada.</span>{" "}
+            Ya más de 900 mamás empezaron sin saber nada y hoy facturan hasta +120$ al DIA.
           </p>
         </motion.div>
         <motion.div
@@ -126,7 +126,7 @@ export function HeroSection() {
               }}
             >
               <Sparkles className="w-5 h-5 mr-2" />
-              Descubre si es para ti
+              Descubre AQUI si esto es para ti
             </Button>
           </motion.div>
           <motion.div
@@ -143,7 +143,7 @@ export function HeroSection() {
               }}
             >
               <Key className="w-5 h-5 mr-2" />
-              Activar mi Llave Digital
+              Quiero ACTIVAR YA MISMO!
             </Button>
           </motion.div>
         </motion.div>
