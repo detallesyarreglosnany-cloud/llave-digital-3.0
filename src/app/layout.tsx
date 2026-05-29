@@ -58,7 +58,7 @@ const productSchema = {
     price: "97",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
-    url: "https://go.hotmart.com/S105487769E?ap=15e3",
+    url: "https://go.hotmart.com/S105487769E?ap=27b1",
   },
   aggregateRating: {
     "@type": "AggregateRating",

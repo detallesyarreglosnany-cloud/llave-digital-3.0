@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Key, Zap } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 const features = [
   "Acceso completo a La Franquicia IA",

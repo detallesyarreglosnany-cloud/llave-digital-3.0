@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 import { trackAddToCart } from "@/lib/pixel";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 export function QueRecibirasSection() {
   return (

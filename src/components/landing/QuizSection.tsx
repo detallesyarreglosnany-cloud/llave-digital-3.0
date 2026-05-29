@@ -8,7 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { trackLead, trackInitiateCheckout, trackQuizStart, trackQuizComplete, trackQuizQuestion, trackHotLead, captureUTMs } from "@/lib/pixel";
 import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 const countries = [
   { value: "", label: "Selecciona tu país" },

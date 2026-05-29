@@ -6,7 +6,7 @@ import { Key, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackViewContent } from "@/lib/pixel";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 function Particles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

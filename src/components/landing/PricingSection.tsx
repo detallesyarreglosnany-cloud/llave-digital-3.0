@@ -7,7 +7,7 @@ import { CheckCircle2, Zap } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
 import Image from "next/image";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 const features = [
   "Acceso completo a La Franquicia IA",

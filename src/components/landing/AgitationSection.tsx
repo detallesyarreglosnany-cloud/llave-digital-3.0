@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { trackViewContent } from "@/lib/pixel";
 import { Flame } from "lucide-react";
 
-const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
+const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
 export function AgitationSection() {
   return (
