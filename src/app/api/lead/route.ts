@@ -10,7 +10,20 @@ const MAILCHIMP_LIST_ID = process.env.MAILCHIMP_LIST_ID || "";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, score, source } = body;
+    const {
+      name,
+      email,
+      country,
+      phone,
+      score,
+      source,
+      isHotLead,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_term,
+      utm_content,
+    } = body;
 
     if (!name || !email) {
       return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
@@ -18,7 +31,12 @@ export async function POST(req: NextRequest) {
 
     const results: { sheets?: boolean; mailchimp?: boolean } = {};
 
-    // Send to Google Sheets
+    // Build Mailchimp tags based on lead quality and source
+    const mailchimpTags = ["llave-digital-3.0", source || "quiz"];
+    if (isHotLead) mailchimpTags.push("hot-lead");
+    if (country) mailchimpTags.push(`pais-${country.toLowerCase()}`);
+
+    // Send to Google Sheets (with all new fields)
     if (GOOGLE_SHEETS_URL) {
       try {
         await fetch(GOOGLE_SHEETS_URL, {
@@ -27,8 +45,16 @@ export async function POST(req: NextRequest) {
           body: JSON.stringify({
             name,
             email,
+            country: country || "",
+            phone: phone || "",
             score: score || "",
             source: source || "quiz",
+            isHotLead: isHotLead ? "yes" : "no",
+            utm_source: utm_source || "",
+            utm_medium: utm_medium || "",
+            utm_campaign: utm_campaign || "",
+            utm_term: utm_term || "",
+            utm_content: utm_content || "",
             date: new Date().toISOString(),
           }),
         });
@@ -38,7 +64,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Send to Mailchimp
+    // Send to Mailchimp (with country, phone, UTM merge fields)
     if (MAILCHIMP_API_KEY && MAILCHIMP_SERVER_PREFIX && MAILCHIMP_LIST_ID) {
       try {
         const mailchimpRes = await fetch(
@@ -55,8 +81,11 @@ export async function POST(req: NextRequest) {
               merge_fields: {
                 FNAME: name.split(" ")[0],
                 LNAME: name.split(" ").slice(1).join(" ") || "",
+                COUNTRY: country || "",
+                PHONE: phone || "",
+                SCORE: score ? String(score) : "",
               },
-              tags: ["llave-digital-3.0", source || "quiz"],
+              tags: mailchimpTags,
             }),
           }
         );

@@ -4,21 +4,25 @@ import { CountdownBar } from "@/components/landing/CountdownBar";
 import { SocialProofBar } from "@/components/landing/SocialProofBar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { PainSection } from "@/components/landing/PainSection";
-import { WhoIAmSection } from "@/components/landing/WhoIAmSection";
 import { AgitationSection } from "@/components/landing/AgitationSection";
-import { CalculatorSection } from "@/components/landing/CalculatorSection";
+import { WhoIAmSection } from "@/components/landing/WhoIAmSection";
+import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
+import { CalculatorSection } from "@/components/landing/CalculatorSection";
 import { QueRecibirasSection } from "@/components/landing/QueRecibirasSection";
+import { PricingSection } from "@/components/landing/PricingSection";
+import { GuaranteeSection } from "@/components/landing/GuaranteeSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { RankingSection } from "@/components/landing/RankingSection";
 import { QuizSection } from "@/components/landing/QuizSection";
 import { FinalCTA } from "@/components/landing/FinalCTA";
-import { Reto21DiasSection } from "@/components/landing/Reto21DiasSection";
-import { Promo3en1Section } from "@/components/landing/Promo3en1Section";
 import { FAQSection } from "@/components/landing/FAQSection";
+import { Promo3en1Section } from "@/components/landing/Promo3en1Section";
+import { Reto21DiasSection } from "@/components/landing/Reto21DiasSection";
 import { Footer } from "@/components/landing/Footer";
 import { WhatsAppButton } from "@/components/landing/WhatsAppButton";
 import { SocialProofToast } from "@/components/landing/SocialProofToast";
+import { ScrollTracker } from "@/components/landing/ScrollTracker";
 
 export default function Home() {
   return (
@@ -26,24 +30,59 @@ export default function Home() {
       <CountdownBar />
       <SocialProofBar />
       <main className="flex-1">
+        {/* HOOK: Captar atención + CTA dual */}
         <HeroSection />
+
+        {/* PROBLEM: Identificar el dolor */}
         <PainSection />
-        <WhoIAmSection />
+
+        {/* AGITATE: Crear urgencia emocional */}
         <AgitationSection />
-        <CalculatorSection />
+
+        {/* TRUST: Autoridad de Daniela */}
+        <WhoIAmSection />
+
+        {/* SOLUTION: Mostrar el camino (PUENTE FALTANTE) */}
+        <HowItWorksSection />
+
+        {/* BENEFITS: Lo que obtienes */}
         <BenefitsSection />
+
+        {/* DESIRE: Potencial interactivo */}
+        <CalculatorSection />
+
+        {/* RECEIVED: Visual de lo que recibes al pagar */}
         <QueRecibirasSection />
+
+        {/* PRICING: Precio con imagen CTA real */}
+        <PricingSection />
+
+        {/* RISK REVERSAL: Garantía para tráfico frío */}
+        <GuaranteeSection />
+
+        {/* SOCIAL PROOF: Historias reales */}
         <TestimonialsSection />
+
+        {/* NUMBERS: Prueba dura de resultados */}
         <RankingSection />
+
+        {/* CAPTURE: Quiz cualificador + lead capture */}
         <QuizSection />
+
+        {/* CLOSE: Último empujón con pricing card */}
         <FinalCTA />
-        <Reto21DiasSection />
-        <Promo3en1Section />
+
+        {/* OBJECTIONS: Manejar objeciones restantes */}
         <FAQSection />
+
+        {/* UPSELL: Opciones adicionales (después de decisión principal) */}
+        <Promo3en1Section />
+        <Reto21DiasSection />
       </main>
       <Footer />
       <WhatsAppButton />
       <SocialProofToast />
+      <ScrollTracker />
     </div>
   );
 }
