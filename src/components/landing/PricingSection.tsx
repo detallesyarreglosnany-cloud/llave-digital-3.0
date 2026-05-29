@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Zap } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/pixel";
-import Image from "next/image";
 
 const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=27b1";
 
@@ -35,34 +34,14 @@ export function PricingSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          {/* Imagen CTA con ventas en tiempo real */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center order-2 md:order-1"
-          >
-            <div className="relative rounded-2xl overflow-hidden border border-gold/20 max-w-xs w-full">
-              <Image
-                src="/images/franquicia-ia-cta.jpeg"
-                alt="Activa tu Franquicia IA - Solo $97 USD - Ventas en tiempo real"
-                width={350}
-                height={500}
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
-
-          {/* Pricing card */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card border-2 border-gold/40 rounded-2xl p-6 md:p-8 pulse-glow relative overflow-hidden order-1 md:order-2"
-          >
+        {/* Pricing card centrada (sin imagen duplicada — ya visible en QueRecibirasSection) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, type: "spring", bounce: 0.2 }}
+          className="bg-card border-2 border-gold/40 rounded-2xl p-6 md:p-8 pulse-glow relative overflow-hidden max-w-md mx-auto"
+        >
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
             <div className="text-center mb-6">
               <Badge className="bg-red-600 text-white text-xs font-bold mb-4 px-3 py-1">
@@ -96,8 +75,7 @@ export function PricingSection() {
             <p className="text-center text-xs text-muted-foreground mt-3">
               Garantía de 7 días. Si no te convence, te devolvemos tu dinero.
             </p>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
