@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, Heart, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackViewContent } from "@/lib/pixel";
 
 const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
 
@@ -87,7 +87,7 @@ export function PainSection() {
               size="lg"
               className="btn-glow-border bg-gold hover:bg-gold-light text-[#0F0D0B] font-bold px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105"
               onClick={() => {
-                trackInitiateCheckout();
+                trackViewContent("pain-cta");
                 window.open(HOTMART_LINK, "_blank");
               }}
             >

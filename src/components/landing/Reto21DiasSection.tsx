@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Flame, CheckCircle2, Zap } from "lucide-react";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackEvent } from "@/lib/pixel";
 
 const HOTMART_RETO_LINK = "https://go.hotmart.com/L105567868D?ap=0d54";
 
@@ -116,7 +116,7 @@ export function Reto21DiasSection() {
               size="lg"
               className="btn-glow-border w-full bg-gold hover:bg-gold-light text-[#0F0D0B] font-bold text-lg py-7 rounded-lg transition-all duration-300 hover:scale-[1.02]"
               onClick={() => {
-                trackInitiateCheckout();
+                trackEvent("InitiateCheckout", { value: 69, currency: "USD" });
                 window.open(HOTMART_RETO_LINK, "_blank");
               }}
             >

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Key, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackViewContent } from "@/lib/pixel";
 
 const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
 
@@ -138,7 +138,7 @@ export function HeroSection() {
               variant="outline"
               className="border-gold text-gold hover:bg-gold hover:text-[#0F0D0B] font-bold text-base md:text-lg px-8 py-6 rounded-lg transition-all duration-300 w-full sm:w-auto"
               onClick={() => {
-                trackInitiateCheckout();
+                trackViewContent("hero-cta");
                 window.open(HOTMART_LINK, "_blank");
               }}
             >

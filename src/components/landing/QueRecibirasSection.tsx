@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackAddToCart } from "@/lib/pixel";
 
 const HOTMART_LINK = "https://go.hotmart.com/S105487769E?ap=15e3";
 
@@ -52,7 +52,7 @@ export function QueRecibirasSection() {
               size="lg"
               className="btn-glow-border bg-gold hover:bg-gold-light text-[#0F0D0B] font-bold text-lg px-10 py-7 rounded-lg transition-all duration-300 hover:scale-105"
               onClick={() => {
-                trackInitiateCheckout();
+                trackAddToCart();
                 window.open(HOTMART_LINK, "_blank");
               }}
             >
